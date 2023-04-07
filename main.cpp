@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
 //    testDy();
-    testMoreEffect31();
+//    testMoreEffect31();
 
     MainWindow w;
     w.show();
