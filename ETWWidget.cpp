@@ -1,8 +1,8 @@
+
 #include "ETWWidget.h"
 #include "ui_ETWWidget.h"
 #include <thread>
 #include <QThread>
-#include <processthreadsapi.h>
 
 ETWWidget::ETWWidget(QWidget *parent) :
     QWidget(parent),
@@ -20,13 +20,16 @@ void ETWWidget::on_pushButton_clicked()
 {
     int result = 0;
     std::thread th = std::thread([&result]() {
-        std::this_thread::sleep_for(std::chrono::seconds(2));
-        result = GetCurrentThreadId();
+        QElapsedTimer ElapsedTimer;
+        ElapsedTimer.start();
+        while (ElapsedTimer.elapsed() < 1000) {
+        }
+        result = quintptr(QThread::currentThreadId());
     });
 
     th.join();
 
-    ui->lineEdit->setText(QString::number(GetCurrentThreadId()));
+    ui->lineEdit->setText(QString::number(quintptr(QThread::currentThreadId())));
     ui->lineEdit_2->setText(QString::number(result));
 }
 
