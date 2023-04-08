@@ -12,6 +12,7 @@ SOURCES += \
     DynamicTest.cpp \
     ETWWidget.cpp \
     MoreEffective31.cpp \
+    MoreEffective32.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -19,6 +20,7 @@ HEADERS += \
     DynamicTest.h \
     ETWWidget.h \
     MoreEffective31.h \
+    MoreEffective32.h \
     mainwindow.h
 
 FORMS += \

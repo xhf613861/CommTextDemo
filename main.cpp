@@ -3,6 +3,7 @@
 #include <QApplication>
 #include "DynamicTest.h"
 #include "MoreEffective31.h"
+#include "MoreEffective32.h"
 
 int main(int argc, char *argv[])
 {

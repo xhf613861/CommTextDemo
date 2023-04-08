@@ -20,10 +20,10 @@ void ETWWidget::on_pushButton_clicked()
 {
     int result = 0;
     std::thread th = std::thread([&result]() {
-        QElapsedTimer ElapsedTimer;
-        ElapsedTimer.start();
-        while (ElapsedTimer.elapsed() < 1000) {
-        }
+//        QElapsedTimer ElapsedTimer;
+//        ElapsedTimer.start();
+//        while (ElapsedTimer.elapsed() < 1000) {
+//        }
         result = quintptr(QThread::currentThreadId());
     });
 
