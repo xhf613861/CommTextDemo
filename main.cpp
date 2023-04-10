@@ -4,6 +4,7 @@
 #include "DynamicTest.h"
 #include "MoreEffective31.h"
 #include "MoreEffective32.h"
+#include "CPPPrimerDemo/CPPPrimerDemo.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,6 +12,7 @@ int main(int argc, char *argv[])
 
 //    testDy();
 //    testMoreEffect31();
+    testCPPPrimerDemo();
 
     MainWindow w;
     w.show();
